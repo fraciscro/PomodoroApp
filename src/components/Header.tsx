@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/AcUnit';
 import { Link } from 'react-router-dom';
 
 const pages = ['Training', 'Pomodoro', 'APIPage', 'ChatGPT'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['LogIn', 'SignUp'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -145,7 +145,7 @@ function Header() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="F" src="/static/images/avatar/2.jpg" />
+                <Avatar className="fa-solid fa-user" />
               </IconButton>
             </Tooltip>
             <Menu
@@ -165,9 +165,15 @@ function Header() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                <Link
+                  key={setting}
+                  to={`/${setting.toLowerCase()}`}
+                  style={{ textDecoration: 'none', display: 'block' }}
+                >
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
