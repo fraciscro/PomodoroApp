@@ -1,13 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from './components/Login';
-import Header from './components/Header';
-import Home from './components/Home';
-import Pomodoro from './components/Pomodoro';
-import Training from './components/Training';
-import ApiPage from './components/ApiPage';
-import ChatGPT from './components/ChatGPT';
+import Login from './components/Login.tsx';
+import Header from './components/Header.tsx';
+import Home from './components/Home.tsx';
+import Pomodoro from './components/Pomodoro.tsx';
+import Training from './components/Training.tsx';
+import ApiPage from './components/ApiPage.tsx';
+import ChatGPT from './components/ChatGPT.tsx';
 import ErrorPage from './components/ErrorPage.tsx';
+import Todo from './components/Todo.tsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/pomodoro" element={<Pomodoro />} />
         <Route path="/apipage" element={<ApiPage />} />
         <Route path="/chatgpt" element={<ChatGPT />} />
+        <Route path="/todo" element={<Todo />} />
       </Routes>
     </>
   );

@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/AcUnit';
 import { Link } from 'react-router-dom';
 
-const pages = ['Training', 'Pomodoro', 'APIPage', 'ChatGPT'];
+const pages = ['Training', 'Todo', 'Pomodoro', 'APIPage', 'ChatGPT'];
 const settings = ['LogIn', 'SignUp'];
 
 function Header() {
